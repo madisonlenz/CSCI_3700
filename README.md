@@ -1,29 +1,62 @@
-Example 4: This project shows how we can connect PostgreSQL with flask and show SELECT results in a HTML table.
+### Flask-PostgreSQL Unique Fruits API
 
-## Quick Start
+This project demonstrates how to integrate Flask with PostgreSQL and display unique items from two database tables in an HTML table. It includes two endpoints:
+
+/api/update_basket_a: Inserts a new fruit entry into basket_a and displays a success or error message.
+/api/unique: Displays unique fruits from basket_a and basket_b in an HTML table, or an error message if applicable.
+
+
+
+#Quick Start Prerequisites
+Ensure you have PostgreSQL installed and running, with two tables (basket_a and basket_b) created:
+in sql Copy this code
+CREATE TABLE basket_a (
+    a INT PRIMARY KEY,
+    fruit_a VARCHAR (100) NOT NULL
+);
+
+CREATE TABLE basket_b (
+    b INT PRIMARY KEY,
+    fruit_b VARCHAR (100) NOT NULL
+);
+
+INSERT INTO basket_a (a, fruit_a)
+VALUES
+    (1, 'Apple'),
+    (2, 'Orange'),
+    (3, 'Banana'),
+    (4, 'Cucumber');
+
+INSERT INTO basket_b (b, fruit_b)
+VALUES
+    (1, 'Orange'),
+    (2, 'Apple'),
+    (3, 'Watermelon'),
+    (4, 'Pear');
+    
+    
 ### Local Test Setup
-First, we need to install a Python 3 virtual environment with:
-```
+#Install a Python 3 Virtual Environment
+
+#Copy bash code:
+
 sudo apt-get install python3-venv
-```
 
-Create a virtual environment:
-```
+#Create and Activate the Virtual Environment
+
 python3 -m venv python_venv
-```
-
-You need to activate the virtual environment when you want to use it:
-```
 source python_venv/bin/activate
-```
 
-To fufil all the requirements for the python server, you need to run:
-```
-pip3 install -r requirements.txt
-```
-Because we are now inside a virtual environment. We do not need sudo.
+#Install Project Requirements
 
-Then you can start the server with:
-```
-python3 main.py
-```
+pip install wheel
+pip install -r requirements.txt
+
+#Run the Server
+
+python main.py
+
+Access the API
+Update basket_a
+View unique fruits by typing this into the browser's httml bar:
+127.0.0.1:5000/api/unique
