@@ -36,27 +36,36 @@ VALUES
     
     
 ### Local Test Setup
-#Install a Python 3 Virtual Environment
+#Install a Python 3 Virtual Environment.
 
 #Copy bash code:
-
+```
 sudo apt-get install python3-venv
-
-#Create and Activate the Virtual Environment
-
+```
+#Create and Activate the Virtual Environment.
+```
 python3 -m venv python_venv
+```
+```
 source python_venv/bin/activate
+```
 
-#Install Project Requirements
-
+#Install Project Requirements.
+```
 pip install wheel
+```
+```
 pip install -r requirements.txt
+```
 
-#Run the Server
+#Run the Server.
 
+```
 python main.py
-
-Access the API
-Update basket_a
+```
+Access the API.
+Update basket_a.
 View unique fruits by typing this into the browser's httml bar:
+
+
 127.0.0.1:5000/api/unique
