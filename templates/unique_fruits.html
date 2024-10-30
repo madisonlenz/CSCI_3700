@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Fruits</title>
+    <style>
+        table {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .error {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Unique Fruits in Baskets</h1>
+
+    {% if error %}
+        <div class="error">
+            <p>Error: {{ error }}</p>
+        </div>
+    {% else %}
+        <table>
+            <tr>
+                <th>Unique Fruits in Basket A</th>
+                <th>Unique Fruits in Basket B</th>
+            </tr>
+            {% for i in range(max_length) %}
+                <tr>
+                    <td>{{ unique_fruits_a[i][0] if i < unique_fruits_a|length else '' }}</td>
+                    <td>{{ unique_fruits_b[i][0] if i < unique_fruits_b|length else '' }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>
+
