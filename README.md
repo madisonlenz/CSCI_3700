@@ -11,20 +11,18 @@ This project demonstrates how to integrate Flask with PostgreSQL and display uni
 
 
 
-
+---
 
 
 #Quick Start Prerequisites
-Ensure you have PostgreSQL installed and running, with two tables (basket_a and basket_b) created:
+Ensure you have PostgreSQL installed and running, with two tables (basket_a and basket_b) copied this code:
 
-
-
-
-in sql Copy this code
+```sql
 CREATE TABLE basket_a (
     a INT PRIMARY KEY,
     fruit_a VARCHAR (100) NOT NULL
 );
+
 
 
 CREATE TABLE basket_b (
@@ -32,10 +30,11 @@ CREATE TABLE basket_b (
     fruit_b VARCHAR (100) NOT NULL
 );
 
+```
+---
 
 
-
-
+```sql
 INSERT INTO basket_a (a, fruit_a)
 VALUES
     (1, 'Apple'),
@@ -50,7 +49,7 @@ VALUES
     (2, 'Apple'),
     (3, 'Watermelon'),
     (4, 'Pear');
-    
+```
     
 ### Local Test Setup
 
