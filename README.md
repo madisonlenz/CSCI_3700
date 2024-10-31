@@ -1,5 +1,7 @@
 ### Flask-PostgreSQL Unique Fruits API
 
+##Team Members: Madison Lenz, Destani Ford
+
 This project demonstrates how to integrate Flask with PostgreSQL and display unique items from two database tables in an HTML table. It includes two endpoints:
 
 
